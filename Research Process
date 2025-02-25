@@ -1,0 +1,19 @@
+Methodology 1: Data Auggmentation of Kaggle Dataset and Better Architecture for Model
+Data Augmentation Techniques
+Given your dataset's structure (words → videos → frames → landmarks), augmentation must preserve gesture semantics while increasing sample counts for underrepresented words. Suggested techniques include:
+
+Temporal Augmentation:
+Speed Variation: Adjust the sequence length by interpolating or decimating landmark sequences to simulate faster or slower signing. For example, to slow down, duplicate frames or interpolate new landmark points; to speed up, remove frames or select subsets.
+Frame Interpolation/Dropping: Generate new frames between existing ones or remove frames to create variations in gesture duration, as seen in "Dataset Transformation System for Sign Language Recognition Based on Image Classification Network" (Dataset Transformation System for Sign Language Recognition Based on Image Classification Network).
+Spatial Augmentation:
+Translation: Shift all landmarks by a small amount (e.g., within 10% of frame size) to simulate different signer positions.
+Scaling: Scale landmark coordinates to simulate varying distances from the camera, ensuring realism (e.g., not making hands too small or large).
+Noise Addition: Add random Gaussian noise to landmark coordinates to simulate measurement errors or poor video quality, as mentioned in studies like "Sign Language Recognition Based on CNN and Data Augmentation".
+Considerations: Avoid augmentations that alter gesture meaning, such as horizontal flipping, unless verified with an ISL expert, as direction-specific signs could be misinterpreted. Rotation around joints (e.g., wrist) might be feasible for hand landmarks but requires careful validation.
+To balance your dataset, set a target number of videos per word (e.g., 20, given the maximum is 22). For words with fewer videos (e.g., 4), generate augmented videos using combinations of the above techniques until reaching the target. For example, for a word with 4 videos, generate 16 augmented videos by applying different augmentations to each original video, ensuring diversity.
+
+Class Weighting
+Cost-sensitive learning involves weighting the loss function to give more importance to minority classes. For your dataset, calculate the weight for each word as total_number_of_videos / number_of_videos_for_that_word. During training, use these weights in the loss function (e.g., CrossEntropyLoss in PyTorch) to ensure each class contributes equally to the total loss. This approach, supported by general machine learning resources like "Handling Class Imbalance in Machine Learning" (Handling Class Imbalance in Machine Learning | by Okan Yenigün | Python in Plain English), helps counteract bias toward majority classes without generating new data.
+
+Combining Strategies
+Research suggests combining data augmentation and class weighting for optimal results, as seen in "Tackling class imbalance in computer vision: a contemporary review" (Tackling class imbalance in computer vision: a contemporary review | Artificial Intelligence Review). This dual approach increases sample diversity and adjusts model focus, improving performance on underrepresented words. For instance, augment data to reach the target count, then train with class weights to fine-tune learning.
