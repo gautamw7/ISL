@@ -33,3 +33,11 @@ Cost-sensitive learning involves weighting the loss function to give more import
 Combining Strategies
 Research suggests combining data augmentation and class weighting for optimal results, as seen in "Tackling class imbalance in computer vision: a contemporary review" (Tackling class imbalance in computer vision: a contemporary review | Artificial Intelligence Review). This dual approach increases sample diversity and adjusts model focus, improving performance on underrepresented words. For instance, augment data to reach the target count, then train with class weights to fine-tune learning.
 
+ Research Paper
+1. The table with all the dataset mentioned 
+2. Explain our dataset 
+3. Explaining the data augmentation
+4. Showing photos of data augmentation 
+5. Methodology
+6. Explaining and image of the model 3D image 
+7. Comparing between frame and landmark extracted frame 
