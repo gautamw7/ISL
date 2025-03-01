@@ -1,5 +1,5 @@
 
-##Data Augmentation
+## Data Augmentation
 How STmaps Can Help with Data Augmentation
 When you augment videos for undersampled words (e.g., by applying transformations like speed variation, frame interpolation, or flipping), it's essential to ensure that the augmented videos still represent the same ISL sign. STmaps can assist in this validation process by:
 
@@ -31,7 +31,7 @@ Consider Fine-Tuning: If you have access to labeled ISL data, fine-tune the hand
 Apply Post-Processing: Use smoothing techniques to reduce noise in the detected landmarks, which can be particularly helpful for live transcription.
 
 
-##Data Type:
+## Data Type:
 Factor	              Method 1: Raw Frames	    Method 2: Landmark-Plotted Frames	Method 3: Landmark Arrays	Fusion     Method: Raw + Landmarks
 Training Speed	      Slow (image processing)	  Moderate (simpler images)	        Fast (numerical data)	               Slowest (dual processing)
 Output in Final Runs	Slow for real-time	      Moderate for real-time	          Fastest for real-time	               Moderate for real-time
@@ -44,7 +44,7 @@ What I'm going to use
 Method 3 -> Method 1 -> Method 2 -> Method 4 
 Depending on the GPU specs and the processing unit provided to us.
 
-Methodology 1: Data Auggmentation of Kaggle Dataset and Better Architecture for Model
+## Methodology 1: Data Auggmentation of Kaggle Dataset and Better Architecture for Model
 Data Augmentation Techniques
 Given your dataset's structure (words → videos → frames → landmarks), augmentation must preserve gesture semantics while increasing sample counts for underrepresented words. Suggested techniques include:
 
@@ -64,7 +64,7 @@ Cost-sensitive learning involves weighting the loss function to give more import
 Combining Strategies
 Research suggests combining data augmentation and class weighting for optimal results, as seen in "Tackling class imbalance in computer vision: a contemporary review" (Tackling class imbalance in computer vision: a contemporary review | Artificial Intelligence Review). This dual approach increases sample diversity and adjusts model focus, improving performance on underrepresented words. For instance, augment data to reach the target count, then train with class weights to fine-tune learning.
 
- Research Paper
+## Research Paper
 1. The table with all the dataset mentioned 
 2. Explain our dataset 
 3. Explaining the data augmentation
