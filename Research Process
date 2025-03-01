@@ -6,15 +6,8 @@ Output in Final Runs	Slow for real-time	      Moderate for real-time	          F
 Memory Utilization	  High (full frames)	      Moderate (plotted images)	        Low (arrays only)	                   Highest (frames + arrays)
 Processing Power	    High (CNNs, GPUs needed)	Moderate (less complex CNNs)    	Low (RNNs or lightweight models)	   Highest (dual CNNs, powerful GPUs)
 Accuracy	            High, but noise-sensitive	Moderate (loss in rendering)	    High (movement-focused)	             Highest (combined features)
-Novelty	Low           (common approach)	        Low (standard CNN use)	          Moderate (optimization potential)	   High (multi-input fusion)
+Novelty	Low          (common approach)	        Low (standard CNN use)	          Moderate (optimization potential)	   High (multi-input fusion)
 
-Factor	Method 1: Raw Frames	Method 2: Landmark-Plotted Frames	Method 3: Landmark Arrays	Fusion Method: Raw + Landmarks
-Training Speed	Slow (image processing)	Moderate (simpler images)	Fast (numerical data)	Slowest (dual processing)
-Output in Final Runs	Slow for real-time	Moderate for real-time	Fastest for real-time	Moderate for real-time
-Memory Utilization	High (full frames)	Moderate (plotted images)	Low (arrays only)	Highest (frames + arrays)
-Processing Power	High (CNNs, GPUs needed)	Moderate (less complex CNNs)	Low (RNNs or lightweight models)	Highest (dual CNNs, powerful GPUs)
-Accuracy	High, but noise-sensitive	Moderate (loss in rendering)	High (movement-focused)	Highest (combined features)
-Novelty	Low (common approach)	Low (standard CNN use)	Moderate (optimization potential)	High (multi-input fusion)
 
 
 What I'm going to use 
