@@ -279,21 +279,6 @@ Explored hyperparameters:
 * **Negative Finding:** ISL scalability projects are bottlenecked without a dedicated large, diverse, and consistent dataset.
 
 ---
-
-## 16️⃣ Action Items & Next Steps
-
-* [ ] **Write Conclusion Section** emphasizing why scalable ISL projects without sufficient datasets are a bad idea.
-* [ ] Optionally, try:
-
-  * Transfer learning with frozen lower layers.
-  * Hard negative mining with out-of-domain data.
-  * Test with aligned data collection environments.
-* [ ] Archive best confusion matrices for supplementary.
-* [ ] Export current working model for demo video generation.
-* [ ] Complete **`conclusion.md`** and **`methodology.tex`** for paper.
-
----
-
 ## 17️⃣ Data, Code & References
 
 * **File:** `Scalability.ipynb` for reproducibility.
