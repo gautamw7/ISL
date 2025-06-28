@@ -1,7 +1,6 @@
----
-
 # 🛠️ Issues.md
 
+---
 ## 1️⃣ Dataset & Data Quality Issues
 
 * **Limited Vocabulary:**
