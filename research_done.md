@@ -1,4 +1,3 @@
-
 ## Data Augmentation
 How STmaps Can Help with Data Augmentation
 When you augment videos for undersampled words (e.g., by applying transformations like speed variation, frame interpolation, or flipping), it's essential to ensure that the augmented videos still represent the same ISL sign. STmaps can assist in this validation process by:
@@ -72,3 +71,143 @@ Research suggests combining data augmentation and class weighting for optimal re
 5. Methodology
 6. Explaining and image of the model 3D image 
 7. Comparing between frame and landmark extracted frame 
+
+
+Here is your **`research_done.md`** ready for **Overleaf, lab notebook, or Notion integration**, capturing **all research milestones completed so far** with **dense, no-fluff, verifiable points** for your ISL negative findings paper:
+
+---
+
+# ✅ research\_done.md — ISL Recognition Project
+
+## 1️⃣ Project Initialization
+
+* Objective defined:
+
+  * Test feasibility of **scalable ISL recognition** using landmark-based temporal models.
+  * Assess **small dataset limitations** for real-world ISL deployment.
+* Initial hypothesis:
+
+  * Landmark-based GRU models with careful augmentation may generalize across users.
+
+---
+
+## 2️⃣ Dataset Handling
+
+* ISL videos collected:
+
+  * **45–262 label classes**, varying samples per label.
+  * Landmark extraction using **MediaPipe**, outputting **543 keypoints (x,y,z)** → 1629 features per frame.
+  * Frame padding to **110 frames** for uniform sequence lengths.
+* User-recorded test dataset (2–3 sec clips) created for testing cross-domain generalization.
+
+---
+
+## 3️⃣ Preprocessing Work Completed
+
+✅ **Padding:** Standardized all videos to 110 frames.
+✅ **Bounding Box Normalization:** Landmark translation + scaling based on body bounding box.
+✅ **Procrustes Alignment:** Applied to align landmark structures across samples for domain normalization.
+✅ **DTW Augmentation:**
+
+* Selected labels using average DTW distances.
+* Augmented dataset using speed/slow/interpolation methods while filtering with DTW thresholds.
+* Reduced augmented video size by \~5x while maintaining similarity.
+
+---
+
+## 4️⃣ Modeling Experiments Completed
+
+✅ Built **Bidirectional GRU-based architecture** for temporal ISL landmark classification.
+✅ Extensive hyperparameter sweeps:
+
+* Learning rates: `1e-3`, `1e-4`, `1e-5`.
+* Dropout configs: `(0, 0.1, 0.1)` and `(0, 0.1, 0.15)`.
+* Early stopping patience: 10, 12.
+* Batch size: 16.
+  ✅ Training and evaluation on 45-label dataset:
+* Final training accuracy: **98.9%**.
+* Final validation accuracy: **92.3%**.
+* F1-score: **0.9208**, AUC-ROC: **0.9985**.
+  ✅ Visual validation:
+* Scatter plots, heatmaps, ROC curves, confusion matrices generated for thorough validation.
+
+---
+
+## 5️⃣ Testing & Fine-Tuning Completed
+
+✅ **Testing on user-recorded videos**:
+
+* Detected significant domain mismatch even after normalization/alignment.
+* Mean landmark distance still non-trivial, limiting generalization.
+
+✅ **Fine-tuning Experiments:**
+
+* Fine-tuning without freezing → catastrophic forgetting, 0% accuracy on prior labels.
+* Fine-tuning with layer freezing:
+
+  * Achieved 100% validation on small samples but still 0% on prior dataset.
+  * Overfitting on few-shot samples, unable to generalize.
+    ✅ Validation on test labels:
+* Certain labels ("Beautiful", "Nice") evaluated post-fine-tuning.
+* Consistent misclassification post-fine-tuning noted.
+
+---
+
+## 6️⃣ Key Findings
+
+✅ Landmark-based GRU models perform well within the dataset but fail to generalize across domains.
+✅ Procrustes and bounding box normalization improve structure alignment but do not solve environment-based variation.
+✅ DTW-based augmentation stabilizes training and label consistency within the dataset.
+✅ Fine-tuning on small samples without large diverse data leads to **catastrophic forgetting**.
+✅ **Scalable ISL recognition requires large, diverse, well-labeled datasets**—not feasible with small isolated datasets.
+
+---
+
+## 7️⃣ Documentation & Tracking Completed
+
+✅ **Architecture.md** (updated to current pipeline).
+✅ **Experiments.md** (full experiment logs).
+✅ Heatmaps, scatter plots, confusion matrices archived for figures in the paper.
+✅ Detailed logs of testing runs, model metrics, and debug outputs tracked systematically.
+
+---
+
+## 8️⃣ Paper Positioning Finalized
+
+✅ Will publish as **“Negative Findings on Small-Scale ISL Recognition with Landmark-Based Models”**.
+✅ Framed around **pitfalls, limitations, and domain shift challenges** for ISL.
+✅ Highlights the **necessity of large-scale datasets** for ISL recognition pipelines.
+✅ Ready for **IEEE/CVPR/NeurIPS workshops focused on Sign Language, Responsible AI, or ML Failures**.
+
+---
+
+## 9️⃣ Technical Tools Used
+
+* **TensorFlow/Keras:** Modeling and training.
+* **NumPy, Pandas:** Data handling.
+* **scikit-learn:** Metrics and confusion matrices.
+* **Matplotlib, Seaborn:** Visualization.
+* **OpenCV, MoviePy:** Frame extraction and video handling.
+* **MediaPipe:** Landmark extraction.
+* Optional integration with `wandb` (not fully used here).
+
+---
+
+## 10️⃣ Pending / Optional Extensions
+
+* [ ] Prepare paper draft (`paper.md` / Overleaf integration).
+* [ ] Generate formal BibTeX references for datasets/tools.
+* [ ] (Optional) Archive final code and dataset splits for reproducibility.
+* [ ] (Optional) Attempt minimal multi-person testing for robustness discussion.
+* [ ] (Optional) Run ablation with Procrustes + bounding box + DTW on a few additional labels for figure clarity.
+
+---
+
+## 11️⃣ Metadata
+
+* **Current phase:** Wrapping up experiments and documentation for paper submission.
+* **Total messages analyzed:** \~250+.
+* **Total words exchanged:** \~60,000+.
+* **Tone:** Debug-heavy, iterative, critical workflow refinement for negative result positioning.
+
+---
