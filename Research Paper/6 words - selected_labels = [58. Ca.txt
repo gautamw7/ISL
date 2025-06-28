@@ -1,0 +1,36 @@
+6 words - selected_labels = ["58. Camera", "14. thin", "4. sad", "30. dirty", "41. you", "9. Nice"]
+14 words - selected_labels = ["14. thin", "9. Nice", "15. expensive", "16. cheap", "18. curved", "20. female", 
+                   "5. Beautiful", "6. Ugly", "8. Blind", "22. Restaurant", "25. Office", "26. University", 
+                   "33. India", "34. alive"]
+
+
+
+rest_labels_file = '/kaggle/input/research-landmarks/Rest_Non_DTW_holistic_labels.pkl'
+rest_landmarks_file = '/kaggle/input/research-landmarks/Rest_Non_DTW_holistic_landmarks_videos.pkl'
+
+# Load original labels and landmarks
+with open(labels_file, 'rb') as f:
+    labels = pickle.load(f)
+
+with open(landmarks_file, 'rb') as f:
+    landmarks = pickle.load(f)
+
+# Load rest labels and landmarks
+with open(rest_labels_file, 'rb') as f:
+    rest_labels = pickle.load(f)
+
+with open(rest_landmarks_file, 'rb') as f:
+    rest_landmarks = pickle.load(f)
+
+# Combine
+combined_labels = labels + rest_labels
+combined_landmarks = landmarks + rest_landmarks  # if list of arrays; use np.concatenate if it's an array
+
+# Save combined files
+with open('combined_labels.pkl', 'wb') as f:
+    pickle.dump(combined_labels, f)
+
+with open('combined_landmarks.pkl', 'wb') as f:
+    pickle.dump(combined_landmarks, f)
+
+print("✅ Combined files saved as 'combined_labels.pkl' and 'combined_landmarks.pkl'")

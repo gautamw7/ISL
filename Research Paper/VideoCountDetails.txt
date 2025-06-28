@@ -1,0 +1,355 @@
+Processing subcategory: Adjectives in Adjectives_1of8
+Number of .mov files in 1. loud: 21
+Number of .mov files in 2. quiet: 21
+Number of .mov files in 3. happy: 21
+Number of .mov files in 4. sad: 8
+Number of .mov files in 5. Beautiful: 8
+Number of .mov files in 6. Ugly: 8
+Number of .mov files in 7. Deaf: 8
+Number of .mov files in 8. Blind: 8
+
+Processing subcategory: Adjectives in Adjectives_2of8
+Number of .mov files in 10. Mean: 8
+Number of .mov files in 11. rich: 8
+Number of .mov files in 12. poor: 8
+Number of .mov files in 13. thick: 8
+Number of .mov files in 14. thin: 4
+Number of .mov files in 15. expensive: 8
+Number of .mov files in 16. cheap: 8
+Number of .mov files in 17. flat: 8
+Number of .mov files in 18. curved: 8
+Number of .mov files in 19. male: 8
+Number of .mov files in 20. female: 8
+Number of .mov files in 21. tight: 8
+Number of .mov files in 22. loose: 8
+Number of .mov files in 9. Nice: 4
+
+Processing subcategory: Adjectives in Adjectives_3of8
+Number of .mov files in 23. high: 8
+Number of .mov files in 24. low: 8
+Number of .mov files in 25. soft: 8
+Number of .mov files in 26. hard: 8
+Number of .mov files in 27. deep: 8
+Number of .mov files in 28. shallow: 8
+Number of .mov files in 29. clean: 8
+Number of .mov files in 30. dirty: 8
+Number of .mov files in 31. strong: 8
+Number of .mov files in 32. weak: 8
+Number of .mov files in 33. dead: 8
+Number of .mov files in 34. alive: 8
+Number of .mov files in 35. heavy: 8
+
+Processing subcategory: Adjectives in Adjectives_4of8
+Number of .mov files in 36. light: 8
+Number of .mov files in 39. famous: 8
+Number of .mov files in 78. long: 21
+Number of .mov files in 79. short: 21
+Number of .mov files in 80. tall: 21
+Number of .mov files in 81. wide: 21
+
+Processing subcategory: Adjectives in Adjectives_5of8
+Number of .mov files in 82. narrow: 21
+Number of .mov files in 83. big large: 21
+Number of .mov files in 84. small little: 21
+Number of .mov files in 85. slow: 21
+Number of .mov files in 86. fast: 21
+
+Processing subcategory: Adjectives in Adjectives_6of8
+Number of .mov files in 87. hot: 21
+Number of .mov files in 88. cold: 20
+Number of .mov files in 89. warm: 21
+Number of .mov files in 90. cool: 21
+Number of .mov files in 91. new: 21
+
+Processing subcategory: Adjectives in Adjectives_7of8
+Number of .mov files in 92. old: 21
+Number of .mov files in 93. young: 21
+Number of .mov files in 94. good: 21
+Number of .mov files in 95. bad: 21
+Number of .mov files in 96. wet: 21
+
+Processing subcategory: Adjectives in Adjectives_8of8
+Number of .mov files in 97. dry: 21
+Number of .mov files in 98. sick: 21
+Number of .mov files in 99. healthy: 21
+
+Processing subcategory: Animals in Animals_1of2
+Number of .mov files in 1. Dog: 20
+Number of .mov files in 2. Cat: 20
+Number of .mov files in 3. Fish: 20
+Number of .mov files in 4. Bird: 20
+Number of .mov files in 5. Cow: 21
+
+Processing subcategory: Animals in Animals_2of2
+Number of .mov files in 6. Mouse: 20
+Number of .mov files in 7. Horse: 20
+Number of .mov files in 8. Animal: 20
+
+Processing subcategory: Clothes in Clothes_1of2
+Number of .mov files in 37. Hat: 20
+Number of .mov files in 38. Dress: 20
+Number of .mov files in 39. Suit: 19
+Number of .mov files in 40. Skirt: 19
+Number of .mov files in 41. Shirt: 20
+
+Processing subcategory: Clothes in Clothes_2of2
+Number of .mov files in 42. T-Shirt: 20
+Number of .mov files in 43. Pant: 20
+Number of .mov files in 44. Shoes: 20
+Number of .mov files in 45. Pocket: 20
+Number of .mov files in 46. Clothing: 20
+
+Processing subcategory: Colours in Colours_1of2
+Number of .mov files in 47. Red: 20
+Number of .mov files in 48. Green: 20
+Number of .mov files in 49. Blue: 20
+Number of .mov files in 50. Yellow: 20
+Number of .mov files in 51. Brown: 21
+
+Processing subcategory: Colours in Colours_2of2
+Number of .mov files in 52. Pink: 20
+Number of .mov files in 53. Orange: 20
+Number of .mov files in 54. Black: 20
+Number of .mov files in 55. White: 20
+Number of .mov files in 56. Grey: 21
+Number of .mov files in 57. Colour: 20
+
+Processing subcategory: Days_and_Time in Days_and_Time_1of3
+Number of .mov files in 66. Sunday: 14
+Number of .mov files in 67. Monday: 14
+Number of .mov files in 68. Tuesday: 14
+Number of .mov files in 69. Wednesday: 14
+Number of .mov files in 70. Thursday: 14
+Number of .mov files in 71. Friday: 14
+Number of .mov files in 72. Saturday: 14
+Number of .mov files in 73. Today: 14
+
+Processing subcategory: Days_and_Time in Days_and_Time_2of3
+Number of .mov files in 74. Tomorrow: 14
+Number of .mov files in 75. Yesterday: 14
+Number of .mov files in 76. Week: 14
+Number of .mov files in 77. Month: 14
+Number of .mov files in 78. Year: 15
+Number of .mov files in 79. Hour: 14
+Number of .mov files in 80. Minute: 14
+
+Processing subcategory: Days_and_Time in Days_and_Time_3of3
+Number of .mov files in 81. Second: 15
+Number of .mov files in 82. Morning: 14
+Number of .mov files in 83. Afternoon: 14
+Number of .mov files in 84. Evening: 14
+Number of .mov files in 85. Night: 15
+Number of .mov files in 86. Time: 15
+
+Processing subcategory: Electronics in Electronics_1of2
+Number of .mov files in 51. Clock: 13
+Number of .mov files in 52. Lamp: 14
+Number of .mov files in 53. Fan: 15
+Number of .mov files in 54. Cell phone: 14
+Number of .mov files in 55. Computer: 14
+
+Processing subcategory: Electronics in Electronics_2of2
+Number of .mov files in 56. Laptop: 14
+Number of .mov files in 57. Screen: 14
+Number of .mov files in 58. Camera: 14
+Number of .mov files in 59. Television: 14
+Number of .mov files in 60. Radio: 14
+
+Processing subcategory: Greetings in Greetings_1of2
+Number of .mov files in 48. Hello: 21
+Number of .mov files in 49. How are you: 21
+Number of .mov files in 50. Alright: 21
+Number of .mov files in 51. Good Morning: 21
+Number of .mov files in 52. Good afternoon: 22
+
+Processing subcategory: Greetings in Greetings_2of2
+Number of .mov files in 53. Good evening: 21
+Number of .mov files in 54. Good night: 21
+Number of .mov files in 55. Thank you: 21
+Number of .mov files in 56. Pleased: 21
+
+Processing subcategory: Home in Home_1of4
+Number of .mov files in 24. Table: 14
+Number of .mov files in 25. Chair: 14
+Number of .mov files in 26. Bed: 14
+Number of .mov files in 27. Dream: 14
+Number of .mov files in 28. Window: 14
+Number of .mov files in 29. Door: 14
+Number of .mov files in 30. Bedroom: 14
+
+Processing subcategory: Home in Home_2of4
+Number of .mov files in 31. Kitchen: 14
+Number of .mov files in 32. Bathroom: 14
+Number of .mov files in 33. Pencil: 14
+Number of .mov files in 34. Pen: 14
+Number of .mov files in 35. Photograph: 14
+Number of .mov files in 36. Soap: 14
+Number of .mov files in 37. Book: 14
+Number of .mov files in 38. Page: 14
+
+Processing subcategory: Home in Home_3of4
+Number of .mov files in 39. Key: 14
+Number of .mov files in 40. Paint: 15
+Number of .mov files in 41. Letter: 14
+Number of .mov files in 42. Paper: 14
+Number of .mov files in 43. Lock: 14
+Number of .mov files in 44. Telephone: 14
+Number of .mov files in 45. Bag: 14
+
+Processing subcategory: Home in Home_4of4
+Number of .mov files in 46. Box: 14
+Number of .mov files in 47. Gift: 14
+Number of .mov files in 48. Card: 14
+Number of .mov files in 49. Ring: 14
+Number of .mov files in 50. Tool: 14
+
+Processing subcategory: Jobs in Jobs_1of2
+Number of .mov files in 84. Teacher: 14
+Number of .mov files in 85. Student: 14
+Number of .mov files in 86. Lawyer: 14
+Number of .mov files in 87. Doctor: 14
+Number of .mov files in 88. Patient: 14
+Number of .mov files in 89. Waiter: 14
+Number of .mov files in 90. Secretary: 14
+Number of .mov files in 91. Priest: 15
+
+Processing subcategory: Jobs in Jobs_2of2
+Number of .mov files in 92. Police: 14
+Number of .mov files in 93. Soldier: 14
+Number of .mov files in 94. Artist: 14
+Number of .mov files in 95. Author: 14
+Number of .mov files in 96. Manager: 14
+Number of .mov files in 97. Reporter: 14
+Number of .mov files in 98. Actor: 14
+Number of .mov files in 99. Job: 14
+
+Processing subcategory: Means_of_Transportation in Means_of_Transportation_1of2
+Number of .mov files in 10. Plane: 21
+Number of .mov files in 11. Car: 20
+Number of .mov files in 12. Truck: 21
+Number of .mov files in 13. Bicycle: 20
+Number of .mov files in 9. Train: 21
+
+Processing subcategory: Means_of_Transportation in Means_of_Transportation_2of2
+Number of .mov files in 14. Bus: 20
+Number of .mov files in 15. Boat: 21
+Number of .mov files in 16. train ticket: 21
+Number of .mov files in 17. Transportation: 21
+
+Processing subcategory: People in People_1of5
+Number of .mov files in 58. Son: 20
+Number of .mov files in 59. Daughter: 20
+Number of .mov files in 60. Mother: 20
+Number of .mov files in 61. Father: 20
+Number of .mov files in 62. Parent: 20
+
+Processing subcategory: People in People_2of5
+Number of .mov files in 63. Baby: 20
+Number of .mov files in 64. Man: 20
+Number of .mov files in 65. Woman: 20
+Number of .mov files in 66. Brother: 21
+Number of .mov files in 67. Sister: 20
+
+Processing subcategory: People in People_3of5
+Number of .mov files in 68. Family: 17
+Number of .mov files in 69. Grandfather: 17
+Number of .mov files in 70. Grandmother: 17
+Number of .mov files in 71. Husband: 20
+Number of .mov files in 72. Wife: 20
+Number of .mov files in 73. King: 20
+
+Processing subcategory: People in People_4of5
+Number of .mov files in 74. Queen: 20
+Number of .mov files in 75. President: 20
+Number of .mov files in 76. Neighbour: 20
+Number of .mov files in 77. Boy: 21
+Number of .mov files in 78. Girl: 20
+
+Processing subcategory: People in People_5of5
+Number of .mov files in 79. Child: 20
+Number of .mov files in 80. Adult: 20
+Number of .mov files in 81. Friend: 20
+Number of .mov files in 82. Player: 20
+Number of .mov files in 83. Crowd: 20
+
+Processing subcategory: Places in Places_1of4
+Number of .mov files in 18. City: 20
+Number of .mov files in 19. House: 20
+Number of .mov files in 20. Street or Road: 20
+Number of .mov files in 21. Train Station: 20
+Number of .mov files in 22. Restaurant: 20
+
+Processing subcategory: Places in Places_2of4
+Number of .mov files in 23. Court: 20
+Number of .mov files in 24. School: 20
+Number of .mov files in 25. Office: 20
+Number of .mov files in 26. University: 20
+Number of .mov files in 27. Park: 20
+
+Processing subcategory: Places in Places_3of4
+Number of .mov files in 28. Store or Shop: 20
+Number of .mov files in 29. Library: 20
+Number of .mov files in 30. Hospital: 20
+Number of .mov files in 31. Temple: 20
+Number of .mov files in 32. Market: 20
+
+Processing subcategory: Places in Places_4of4
+Number of .mov files in 33. India: 20
+Number of .mov files in 34. Ground: 20
+Number of .mov files in 35. Bank: 20
+Number of .mov files in 36. Location: 20
+
+Processing subcategory: Pronouns in Pronouns_1of2
+Number of .mov files in 40. I: 21
+Number of .mov files in 41. you: 21
+Number of .mov files in 42. he: 21
+Number of .mov files in 43. she: 21
+Number of .mov files in 44. it: 21
+
+Processing subcategory: Pronouns in Pronouns_2of2
+Number of .mov files in 45. we: 21
+Number of .mov files in 46. you (plural): 21
+Number of .mov files in 47. they: 21
+
+Processing subcategory: Seasons in Seasons_1of1
+Number of .mov files in 61. Summer: 14
+Number of .mov files in 62. Spring: 14
+Number of .mov files in 63. Winter: 14
+Number of .mov files in 64. Fall: 15
+Number of .mov files in 65. Season: 14
+Number of .mov files in Ex. Monsoon: 14
+
+Processing subcategory: Society in Society_1of3
+Number of .mov files in 1. Religion: 14
+Number of .mov files in 2. Death: 14
+Number of .mov files in 3. Medicine: 14
+Number of .mov files in 4. Money: 14
+Number of .mov files in 5. Bill: 14
+Number of .mov files in 6. Marriage: 14
+Number of .mov files in 7. Team: 14
+Number of .mov files in 8. Race (ethnicity): 14
+
+Processing subcategory: Society in Society_2of3
+Number of .mov files in 10. Energy: 14
+Number of .mov files in 11. War: 14
+Number of .mov files in 12. Peace: 14
+Number of .mov files in 13. Attack: 15
+Number of .mov files in 14. Election: 14
+Number of .mov files in 15. Newspaper: 14
+Number of .mov files in 16. Gun: 14
+Number of .mov files in 9. Technology: 14
+
+Processing subcategory: Society in Society_3of3
+Number of .mov files in 17. Sport: 14
+Number of .mov files in 18. Exercise: 14
+Number of .mov files in 19. Ball: 15
+Number of .mov files in 20. Price: 14
+Number of .mov files in 21. Sign: 14
+Number of .mov files in 22. Science: 14
+Number of .mov files in 23. God: 14
+
+Maximum count of .mov & .mp4 files found: 22
+
+Minimum count of .mov & .mp4 files found: 4
+
+Average count of .mov & .mp4 files found: 16.248091603053435

@@ -1,0 +1,18 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore video temp or heavy intermediary folders if needed
+*.mp4
+*.avi
+
+# Ignore environment files
+.env
+
