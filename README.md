@@ -40,6 +40,7 @@ This repository documents **systematic experiments, pipelines, and negative find
 ## 🚫 Limitations
 
 - Small vocabulary (`45 words`) insufficient for real-world ISL scalability.
+* Note: Include ISL has over 250+ words. 
 - Domain mismatch between train/test environments remains unresolved.
 - No external dataset integration due to constraints.
 
