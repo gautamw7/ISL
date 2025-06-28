@@ -31,10 +31,10 @@ This repository documents **systematic experiments, pipelines, and negative find
 
 - `experiments.md` – Full experimental log.
 - `issues.md` – Bottlenecks and challenges.
-- `conclusion.md` – Negative findings for publication.
-- `future_work.md` – Concrete steps for future ISL research.
 - `architecture.md` – Final model architecture.
 - `scalability.ipynb` – Core experimentation notebook.
+- `isl-transcript-v-3-0.ipynb` – Pipeline and final notebook before experiments notebook - https://www.kaggle.com/code/gautamw7/isl-transcript-v-3-0/edit
+- `isl-transcript-v-2.0.ipynb` – Pipeline and intial testing - https://www.kaggle.com/code/gautamw7/isl-transcript-v-2-0?scriptVersionId=233929481
 - `figures/` – Confusion matrices, ROC curves, and scatter plots for publication.
 
 ## 🚫 Limitations
