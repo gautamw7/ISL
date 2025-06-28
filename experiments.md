@@ -151,17 +151,171 @@ AUC-ROC: 0.9985
 * **Date range:** until 2025-06-28
 
 ---
+## 11️⃣ Dataset Preparation
 
-## ✅ Checklist of Potential Misses
+* **Datasets**:
 
-Please confirm or upload if you want them integrated:
+  * Combined `holistic_labels_videos.pkl` and `rest_DTW_holistic_labels_videos.pkl`.
+  * Landmarks extracted using **MediaPipe Holistic**, resulting in:
 
-* [ ] Exact **hyperparameter tuning ranges** across all runs.
-* [ ] **Scripts for landmark extraction** if needed in the appendix.
-* [ ] **Detailed plots** for ROC, confusion matrix with label mappings.
-* [ ] Notes on **hardware used (GPU/CPU RAM, etc.)**.
-* [ ] Notes on **inference speed, model size** for deployment feasibility analysis.
-* [ ] Any **formal reference list (BibTeX) entries** to track cited tools and methods.
+    * Shape per frame: `1629` features (`543` keypoints x `3` (x, y, z)).
+    * Video sequence shapes: `(frames, 1629)`.
+    * Padding/trimming standardized to `110` frames per video using interpolation if short and frame-skipping if long.
+* **Statistics**:
+
+  * Average frames per label calculated and plotted.
+  * Typical frames per video: `110`.
+  * Sequence length distribution and per-label frame distribution visualized.
+* **Landmark Normalization**:
+
+  * Explored:
+
+    * **Chest-centered translation normalization**.
+    * **Bounding box normalization** (scaling to body box width, height, depth).
+    * **Procrustes alignment** (rotation + scaling + translation invariant alignment).
+  * Final chosen pipeline: Bounding box normalization + Procrustes alignment for testing.
+* **Labels**:
+
+  * Top `30`, `45` label sets used for different scalability experiments.
+  * Testing also performed on manually recorded **real-world test dataset** for "Beautiful" and "Nice".
+* **GPU**:
+
+  * **Kaggle T4 x 2** GPU environment used.
+  * Average training time per run (8 models with 45 labels): \~15-20 minutes per configuration.
 
 ---
+
+## 12️⃣ Hyperparameter Tuning
+
+Explored hyperparameters:
+
+* **Learning Rate**:
+
+  * `0.0001, 0.00005` fixed for stability.
+* **Dropout configurations**:
+
+  * `(0, 0.1, 0.1)`
+  * `(0, 0.1, 0.15)`
+* **Patience for early stopping**:
+
+  * `10`, `12`
+* **Batch size**:
+
+  * `16`
+* **Epochs**:
+
+  * Up to `80` (typically converged by `30-60`).
+
+---
+
+## 13️⃣ Model Architectures
+
+* **Primary Model**:
+
+  * GRU and Bidirectional GRU, LSTM, Bi-LSTM compared.
+  * Typical pipeline:
+
+    * Input: `(110, 1629)`
+    * 2-3 layers GRU/LSTM/Bi-GRU with dropout.
+    * Dense layers: `128 -> 64 -> 32`.
+    * Output: Softmax over `N` labels (`N = 30, 45`).
+* **Fusion Model (Planned, Not Run)**:
+
+  * Hand landmarks: `21 keypoints x 3`, LSTM layers \[128, 64, 32].
+  * Face landmarks: `68 keypoints x 3`, LSTM layers \[32, 16, 8].
+  * Shoulder landmarks: `4 keypoints x 3`, LSTM layers \[8, 4, 2].
+  * Concatenated and passed through Dense layers \[128, 64, 32].
+
+---
+
+## 14️⃣ Experiments & Results
+
+### A) Scalability Experiments
+
+* **30 Labels**:
+
+  * Achieved validation accuracy: `~88-90%`.
+  * AUC-ROC: `0.996+`
+* **45 Labels**:
+
+  * Achieved validation accuracy: `~92%` (without Procrustes).
+  * After Procrustes alignment, slightly lower `85-88%`.
+* **Test Data Real-World Generalization**:
+
+  * Pre-finetuning:
+
+    * Beautiful: `87.5%`, Nice: `100%`.
+  * Post-finetuning (without freezing):
+
+    * Generalization collapse (`0%`).
+  * Post-finetuning (with layer freezing):
+
+    * Validation accuracy restored `88-100%`.
+    * Still poor test generalization due to domain shift.
+
+### B) DTW Filtering Impact:
+
+* DTW filtering reduced augmented video dataset size by `5x`.
+* Augmented datasets without DTW: \~5 GB vs with DTW: \~850 MB.
+
+### C) Inference Observations:
+
+* Original vs. test video landmark mean distances:
+
+  * Without normalization: \~30.
+  * Bounding box + scale normalization: reduced to \~7.
+* Procrustes alignment: reduced distance but no consistent generalization improvement.
+
+---
+
+## 15️⃣ Drawbacks & Challenges
+
+* Severe **domain shift** between original dataset (DSLR shot, standing, consistent background) vs test videos (laptop camera, variable lighting, seated).
+* Small dataset with **low vocabulary** (`45` labels vs `>1000` needed).
+* Video sequence variation across contributors.
+* Augmentation insufficient to generalize to real-world unseen videos.
+* Normalization and alignment help reduce feature distance but do not fully close generalization gap.
+* **Negative Finding:** ISL scalability projects are bottlenecked without a dedicated large, diverse, and consistent dataset.
+
+---
+
+## 16️⃣ Action Items & Next Steps
+
+* [ ] **Write Conclusion Section** emphasizing why scalable ISL projects without sufficient datasets are a bad idea.
+* [ ] Optionally, try:
+
+  * Transfer learning with frozen lower layers.
+  * Hard negative mining with out-of-domain data.
+  * Test with aligned data collection environments.
+* [ ] Archive best confusion matrices for supplementary.
+* [ ] Export current working model for demo video generation.
+* [ ] Complete **`conclusion.md`** and **`methodology.tex`** for paper.
+
+---
+
+## 17️⃣ Data, Code & References
+
+* **File:** `Scalability.ipynb` for reproducibility.
+* **Datasets:**
+
+  * `holistic_labels_videos.pkl`, `rest_DTW_holistic_labels_videos.pkl`
+  * Combined into `combined_labels.pkl`, `combined_landmarks.pkl`.
+* **GPU:** Kaggle T4 x 2.
+* **Frameworks:** TensorFlow 2.x, NumPy, scikit-learn, Matplotlib.
+* **Scripts:**
+
+  * Landmark padding/trimming to 110 frames.
+  * DTW filtering.
+  * Procrustes alignment implementation for frame-wise landmark alignment.
+
+---
+
+## 18️⃣ Metadata
+
+* **Approximate total messages:** 900+ (massive context).
+* **Word count:** \~75,000+ tokens total context.
+* **Tone:** Debug-focused, advanced experimental tuning, negative finding documentation, workflow alignment for a paper.
+
+---
+
 
